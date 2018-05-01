@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Together';
+  src:url("Together-KwonJungae.woff");
+}
+
+body{
+  font-family: Together;
+}
