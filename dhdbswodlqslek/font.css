@@ -1,10 +1,8 @@
-@charset "UTF-8";
-
 @font-face {
-  font-family: 'Together';
-  src:url("Together-KwonJungae.woff");
+  font-family: 'Nanum Pen Script', cursive;
+  src:url();
 }
 
 body{
-  font-family: Together;
+  font-family: '';
 }
