@@ -54,6 +54,34 @@
     float: right;
     background-color: skyblue;
   }
+  .sidebar {
+	  float: left;
+	  width: 300px;
+	  height:700px;
+	  background-color:#DFD;
+	  padding-top:20px;
+	  padding-left:10px;
+	  padding-right:10px;
+  }
+
+  .sidebar img {
+	  margin-bottom: 5px;
+	  border: 1px solid #ccc;
+	  opacity:0.5;
+	  text-align:center;
+  }
+  .sidebar img:hover{
+	  border:1px solid #000;
+	  opacity:1.0;
+  }
+
+  footer {
+	  padding: 10px 0;
+	  background-color:white;
+	  color:black;
+	  text-align:center;
+	  clear: both;
+  }
 
 
 
@@ -61,7 +89,7 @@
 </head>
 <body>
   <header>
-      <p class="middle"><img src="logo.jpg" width="60px;" height="60px;">국민대 고양이 추어오</p>
+      <p class="middle"><a href="index.html" style="text-decoration:none; color:black;" ><img src="logo.jpg" width="60px;" height="60px;">국민대 고양이 추어오</a></p>
   <ul>
     <li><a href ="index.html">Home</a></li>
     <li><a href="https://www.facebook.com/kmucat/">Facebook</a></li>
@@ -74,11 +102,17 @@
     <li class="right-align"><a href="#adopt">입양하기</a></li>
   </ul>
   </header>
-<section>
+  <section>
+    <aside class="sidebar">
+    	<h3>★알립니다★</h3>
+    	<p>우리 국냥이들이 유명해지고 있어요!</p>
+      <a href="https://www.youtube.com/watch?v=OuyCInEbdjI"><img src="sbs_news.jpg"></a>
+      <a href="https://www.youtube.com/watch?v=RcOHrWC8YU4"><img src="youtube.jpg"></a>
+		</aside>
 
-</section>
-<footer>
-  <p>Copyright 20171651 Younjae Oh</p>
-</footer>
+  </section>
+  <footer>
+    <p>Copyright 20171651 Younjae Oh</p>
+  </footer>
 </body>
 </html>
