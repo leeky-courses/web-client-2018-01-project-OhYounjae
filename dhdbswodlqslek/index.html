@@ -6,16 +6,16 @@
   <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&amp;subset=korean" rel="stylesheet">
 
   <style>
+
   header {
     padding: 0;
     margin-top: 0;
-    background-size: auto;
-    background-image: url(main.jpg);
+    margin-bottom: 0;
   }
   .middle {
     text-align: center;
     font-size: 45px;
-    color: white;
+    color: black;
   }
 
   body {
@@ -53,29 +53,69 @@
   }
   .right-align {
     float: right;
+    background-color: skyblue;
   }
 
+  .sidebar {
+	float: left;
+	width: 300px;
+	height:700px;
+	background-color:#DFD;
+	padding-top:20px;
+	padding-left:10px;
+	padding-right:10px;
+}
 
+.sidebar img {
+	margin-bottom: 5px;
+	border: 1px solid #ccc;
+	opacity:0.5;
+	text-align:center;
+}
+.sidebar img:hover{
+	border:1px solid #000;
+	opacity:1.0;
+}
+footer {
+	padding: 10px 0;
+	background-color:white;
+	color:black;
+	text-align:center;
+	clear: both;
+}
 
   </style>
 </head>
 <body>
   <header>
-      <p class="middle">국민대 고양이 추어오</p>
-  <ul>
-    <li><a href ="index.html">Home</a></li>
-    <li><a href="https://www.facebook.com/kmucat/">Facebook</a></li>
-    <li><a href="kookmin_cat_club.html">소개합니다</a></li>
-    <li><a href="intro_cats.html">국냥이들</a></li>
-    <li><a href="byebye.html">냥이별</a></li>
-    <li><a href="webtoon.html">매일매일 국냥이</a></li>
-
-    <li class="right-align"><a href="#contact">Contact</a></li>
-    <li class="right-align"><a href="#adopt">입양하기</a></li>
-  </ul>
+      <p class="middle"><img src="logo.jpg" width="60px;" height="60px;">국민대 고양이 추어오</p>
   </header>
+  <nav>
+    <ul>
+      <li><a href ="index.html">Home</a></li>
+      <li><a href="https://www.facebook.com/kmucat/">Facebook</a></li>
+      <li><a href="kookmin_cat_club.html">소개합니다</a></li>
+      <li><a href="intro_cats.html">국냥이들</a></li>
+      <li><a href="byebye.html">냥이별</a></li>
+      <li><a href="webtoon.html">매일매일 국냥이</a></li>
+
+      <li class="right-align"><a href="#contact">Contact</a></li>
+      <li class="right-align"><a href="#adopt">입양하기</a></li>
+
+    </ul>
+  </nav>
 <section>
-  <img src="간식주지마새오.jpg" width="70%;" height="auto;">
+    <img src="간식주지마새오.jpg" width="990px;" height="720px;">
+    <aside class="sidebar">
+				<h3>★알립니다★</h3>
+				<p>우리 국냥이들이 유명해지고 있어요!</p>
+
+        <a href="https://www.youtube.com/watch?v=OuyCInEbdjI"><img src="sbs_news.jpg"></a>
+        <a href="https://www.youtube.com/watch?v=RcOHrWC8YU4"><img src="youtube.jpg"></a>
+
+
+		</aside>
+
 </section>
 <footer>
   <p>Copyright 20171651 Younjae Oh</p>
