@@ -5,6 +5,7 @@
   <title>Kookmin University Cats</title>
   <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&amp;subset=korean" rel="stylesheet">
 
+
   <style>
   header {
     padding: 0;
@@ -75,28 +76,7 @@
 	  opacity:1.0;
   }
 
-   /* js를 사용해서 팝업 효과로 이지미를 크게 볼 수 있게
-      기능을 추가할 예정 */
-  .content{
-    margin-left: 30px;
-    display: inline;
-    width: 1500px;
-    height: 720px;
-  }
 
-  .content img{
-    margin-left: 20px;
-    border: 2px;
-    border-radius: 10px;
-    opacity: 0.5;
-    width : 360px;
-    height: 280px;
-  }
-
-  .content img:hover{
-    border: 1px;
-    opacity: 1.0;
-  }
   form {
     margin: 0 auto;
     width: 300px;
@@ -152,8 +132,31 @@
 	  clear: both;
   }
 
+  #slidebox {
+    margin-left: 500px;
+    margin-top: 100px;
+    position:relative;
+    width:600px;
+    height:400px;
+    overflow:hidden;
+    white-space:nowrap;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    }
+  #slidebox ul#slider {
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  #slidebox ul li {
 
-
+    width:600px;
+    height:400px;
+  }
+  #slidebox ul li img {
+    width:600px;
+    height:400px;
+  }
   </style>
 </head>
 <body>
@@ -205,24 +208,84 @@
     </form>
 
   </aside>
-  <section class="content">
+  <div id="slidebox">
+    <ul id="slider">
+    <li>
+      <img src="intro_cat\1_깨비.jpg" title="깨비">
+    </li>
+    <li>
+      <img src="intro_cat\2_유자.jpg" title="유자">
+    </li>
+    <li>
+      <img src="intro_cat\3_두부생강.jpg" title="두부와 생강이">
+    </li>
+    <li>
+      <img src="intro_cat\4_리코타치즈샐러드.jpg" title="리코타치즈샐러드 삼형제">
+    </li>
+    <li>
+      <img src="intro_cat\5_까베여름이.jpg" title="까베와 여름이">
+    </li>
+    <li>
+      <img src="intro_cat\6_타짜삼이.jpg" title="타짜와 삼이">
+    </li>
+    <li>
+      <img src="intro_cat\7_경상댁금공이.jpg" title="경상댁과 금공이">
+    </li>
+    <li>
+      <img src="intro_cat\8_newcats.jpg" title="new 냥이들">
+    </li>
+    <li>
+      <img src="intro_cat\9_letter.jpg">
+    </li>
+  </div>
+  <script type='text/javascript'>
+      var x = 600;
+      var slider = document.getElementById("slider");
+      var slideArray = slider.getElementsByTagName("li");
+      var slideMax = slideArray.length - 1;
+      var curSlideNo = 0;
 
-    <br>
-    <img src="intro_cat\1_깨비.jpg" title="깨비">
-    <img src="intro_cat\2_유자.jpg" title="유자">
-    <img src="intro_cat\3_두부생강.jpg" title="두부와 생강이">
-    <br><br>
+      for (i = 0; i <= slideMax; i++) {
+        if (i == curSlideNo) slideArray[i].style.left = 0;
+        else slideArray[i].style.left = -x + "px";
+      }
 
-    <img src="intro_cat\4_리코타치즈샐러드.jpg" title="리코타치즈샐러드 삼형제">
-    <img src="intro_cat\5_까베여름이.jpg" title="까베와 여름이">
-    <img src="intro_cat\6_타짜삼이.jpg" title="타짜와 삼이">
-    <br><br>
+      slider.addEventListener('click', function () {
+        changeSlide();
+      }, false);
 
-    <img src="intro_cat\7_경상댁금공이.jpg" title="경상댁과 금공이">
-    <img src="intro_cat\8_newcats.jpg" title="new 냥이들">
-    <img src="intro_cat\9_letter.jpg">
+      var aniStart = false;
+      var next = 1;
+      var changeSlide = function(){
+        if (aniStart === true) return;
+        next = curSlideNo + 1;
+        if (next > slideMax) next = 0;
+        aniStart = true;
+        sliding();
+      }
 
-  </section>
+      function sliding() {
+        var curX = parseInt(slideArray[curSlideNo].style.left, 10);
+        var nextX = parseInt(slideArray[next].style.left, 10);
+        var newCurX = curX + 10;
+        var newNextX = nextX + 10;
+        if (newCurX >= x) {
+          slideArray[curSlideNo].style.left = -x + "px";
+          slideArray[next].style.left = 0;
+          curSlideNo = curSlideNo + 1;
+          if (curSlideNo > slideMax) curSlideNo = 0;
+          aniStart = false;
+          return;
+        }
+        slideArray[curSlideNo].style.left = newCurX + "px";
+        slideArray[next].style.left = newNextX + "px";
+        setTimeout(function () {
+          sliding();
+        }, 20);
+      }
+      setInterval(changeSlide,2000);
+  </script>
+
   <footer>
     <p>Copyright 20171651 Younjae Oh</p>
   </footer>

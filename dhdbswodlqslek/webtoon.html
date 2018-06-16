@@ -152,10 +152,12 @@
 	  text-align:center;
 	  clear: both;
   }
-
-
-
   </style>
+  <script language ="javascript">
+  function new(){
+    window.open("webtoon", "new", "width=300, height= 300, left=30, top=30");
+  }
+  </script>
 </head>
 <body>
   <header>
@@ -206,18 +208,25 @@
     </form>
 
   </aside>
+
   <section class="content">
-    <img src="webtoons\1_day.jpg" alt="매일매일_국냥이_1" title="1. 얼큰 깨비" width="200px" height="360px">
-    <img src="webtoons\2_day.jpg" alt="매일매일_국냥이_2" title="2. 냥 드러머" width="200px" height="360px">
-    <img src="webtoons\3_day.jpg" alt="매일매일_국냥이_3" title="3. 안녕, 타짜" width="280px" height="280px">
+    <a href="webtoons\1_day.jpg" title="1. 얼큰 깨비" onclick="puShow(this.title, this.href); return false;" >
+    <img src="webtoons\1_day.jpg" alt="매일매일_국냥이_1" title="1. 얼큰 깨비" width="200px" height="360px"></a>
+    <a href="webtoons\2_day.jpg" title="2. 냥 드러머" onclick="puShow(this.title, this.href); return false;" >
+    <img src="webtoons\2_day.jpg" alt="매일매일_국냥이_2" title="2. 냥 드러머" width="200px" height="360px"></a>
+    <a href="webtoons\3_day.jpg" title="3. 안녕, 타짜" onclick="puShow(this.title, this.href); return false;" >
+    <img src="webtoons\3_day.jpg" alt="매일매일_국냥이_3" title="3. 안녕, 타짜" width="280px" height="280px"><a/>
     <br>
   </section>
 
   <section class="content">
+    <a href="webtoons\4_day.jpg" title="4. 리코타 치즈 샐러드" onclick="puShow(this.title, this.href); return false;" >
+    <img src="webtoons\4_day.jpg" alt="매일매일_국냥이_4" title="4. 리코타 치즈 샐러드" width="200px" height="360px"></a>
+    <a href="webtoons\5_day.jpg" title="5. 사료비 맞는 고양이" onclick="puShow(this.title, this.href); return false;" >
+    <img src="webtoons\5_day.jpg" alt="매일매일_국냥이_5" title="5. 사료비 맞는 고양이" width="200px" height="360px"></a>
+    <a href="webtoons\6_day.jpg" title="6. 치즈나무 치즈 열렸네" onclick="puShow(this.title, this.href); return false;" >
+    <img src="webtoons\6_day.jpg" alt="매일매일_국냥이_6" title="6. 치즈나무 치즈 열렸네" width="200px" height="360px"></a>
 
-    <img src="webtoons\4_day.jpg" alt="매일매일_국냥이_4" title="4. 리코타 치즈 샐러드" width="200px" height="360px">
-    <img src="webtoons\5_day.jpg" alt="매일매일_국냥이_5" title="5. 사료비 맞는 고양이" width="200px" height="360px">
-    <img src="webtoons\6_day.jpg" alt="매일매일_국냥이_6" title="6. 치즈나무 치즈 열렸네" width="200px" height="360px">
   </section>
   <footer>
   <p>Copyright 20171651 Younjae Oh</p>
